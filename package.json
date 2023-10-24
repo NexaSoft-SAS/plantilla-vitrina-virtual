@@ -1,0 +1,57 @@
+{
+  "name": "vitrina-virtual",
+  "version": "1.0.0",
+  "description": "La mejor plantilla para tu vitrina virtual",
+  "main": "assets/js/astro-launch-ui.min.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "create-free-demo": "node create-free-demo.js"
+  },
+  "keywords": [
+    "NexaSoft",
+    "Startup",
+    "Store",
+    "Store Theme",
+    "Store Template",
+    "Online Store",
+    "Startup Template"
+  ],
+  "author": "Nexasoft SAS <nexasoftprofessionalsolutions@gmail.com> (https://www.nexasoft.dev/)",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/react": "^3.0.2",
+    "@astrojs/tailwind": "^5.0.0",
+    "@heroicons/react": "^2.0.16",
+    "@material-tailwind/react": "^2.0.1",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^3.1.4",
+    "forward-ref": "^1.0.0",
+    "framer-motion": "^10.12.16",
+    "fs-extra": "^11.1.1",
+    "json-server": "^0.17.0",
+    "next": "^13.4.4",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-bootstrap": "^2.6.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/next": "^9.0.0",
+    "sass": "^1.55.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexasoft/vitrina-virtual.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nexasoft/vitrina-virtual/issues"
+  },
+  "homepage": "https://www.nexasoft.dev/"
+}
