@@ -1,6 +1,6 @@
 import ThemeProvider from "./theme-provider";
-import Navbar from "./defaultNavbar"
- 
+import Navbar from "./defaultNavbar";
+
 import { Typography, Input, Button } from "@material-tailwind/react";
 
 export function SignUp() {
@@ -13,10 +13,16 @@ export function SignUp() {
             Crea tu cuenta
           </Typography>
           <Typography className="font-normal mb-12 text-blue-gray-800">
-           Ingresa tu correo electrónico y contraseña para registrarte.
+            Ingresa tu correo electrónico y contraseña para registrarte.
           </Typography>
           <form action="#" className="mx-auto max-w-[24rem] text-left">
-            <Input color="black" size="lg" label="Correo electrónico" type="email" name="email" />
+            <Input
+              color="black"
+              size="lg"
+              label="Correo electrónico"
+              type="email"
+              name="email"
+            />
             <Button color="dark" size="lg" className="mt-4" fullWidth>
               Continuar
             </Button>
@@ -73,10 +79,7 @@ export function SignUp() {
               />
               Crea tu cuenta usando apple
             </Button>
-            <Typography
-              color="gray"
-              className="mt-6 text-center font-normal"
-            >
+            <Typography color="gray" className="mt-6 text-center font-normal">
               ¿Ya tienes una cuenta?{" "}
               <a
                 href="/astro-showcase/login"
@@ -93,4 +96,3 @@ export function SignUp() {
 }
 
 export default SignUp;
-

@@ -9,7 +9,7 @@ const customTheme = {
         initial: {
           fontWeight: "font-bold",
           // fontSize: "!text-sm",
-        }
+        },
       },
       variants: {
         filled: {
@@ -40,7 +40,7 @@ const customTheme = {
           dark: {
             background: "bg-dark",
             color: "text-white",
-          }
+          },
         },
         outlined: {
           sky: {
@@ -57,34 +57,32 @@ const customTheme = {
           },
           red: {
             color: "text-red",
-            border: "border border-red"
+            border: "border border-red",
           },
           green: {
             color: "text-green",
-            border: "border border-green"
+            border: "border border-green",
           },
           slate: {
             color: "text-slate",
-            border: "border border-slate"
+            border: "border border-slate",
           },
           dark: {
             color: "text-dark",
-            border: "border border-dark"
-          }
+            border: "border border-dark",
+          },
         },
         text: {
           dark: {
-            color: "text-dark"
-          }
+            color: "text-dark",
+          },
         },
       },
     },
   },
   iconButton: {
     valid: {
-      colors: [
-        'dark'
-      ],
+      colors: ["dark"],
     },
     styles: {
       variants: {
@@ -103,46 +101,43 @@ const customTheme = {
           },
           red: {
             color: "text-red",
-            border: "border border-red"
+            border: "border border-red",
           },
           green: {
             color: "text-green",
-            border: "border border-green"
+            border: "border border-green",
           },
           slate: {
             color: "text-slate",
-            border: "border border-slate"
+            border: "border border-slate",
           },
           dark: {
             color: "text-dark",
-            border: "border border-dark"
-          }
+            border: "border border-dark",
+          },
         },
         filled: {
           dark: {
             background: "bg-dark",
-            color: "text-white"
-          }
-        }
+            color: "text-white",
+          },
+        },
       },
-
     },
   },
   checkbox: {
     valid: {
-      colors: [
-        'dark'
-      ],
+      colors: ["dark"],
     },
     styles: {
       variants: {
         filled: {
           dark: {
             color: "bg-dark",
-            border: "text-white"
-          }
-        }
-      }
+            border: "text-white",
+          },
+        },
+      },
     },
   },
   navbar: {
@@ -176,50 +171,46 @@ const customTheme = {
           dark: {
             background: "bg-dark",
             color: "text-white",
-          }
-        }
+          },
+        },
       },
     },
     valid: {
-      colors: [
-        'dark'
-      ],
-    }
+      colors: ["dark"],
+    },
   },
 
   card: {
     valid: {
-      colors: [
-        'dark'
-      ],
+      colors: ["dark"],
     },
     styles: {
       variants: {
         filled: {
           sky: {
-            background: "bg-sky"
+            background: "bg-sky",
           },
           yellow: {
-            background: "bg-yellow"
+            background: "bg-yellow",
           },
           blue: {
-            background: "bg-blue"
+            background: "bg-blue",
           },
           green: {
-            background: "bg-green"
+            background: "bg-green",
           },
           red: {
-            background: "bg-red"
+            background: "bg-red",
           },
           slate: {
-            background: "bg-slate"
+            background: "bg-slate",
           },
           dark: {
-            background: "bg-dark"
-          }
-        }
-      }
-    }
+            background: "bg-dark",
+          },
+        },
+      },
+    },
   },
 
   input: {
@@ -227,9 +218,7 @@ const customTheme = {
       colors: ["dark", "slate", "sky", "yellow", "blue", "green", "red"],
     },
     styles: {
-      base: {
-     
-      },
+      base: {},
       variants: {
         outlined: {
           sky: {
@@ -246,24 +235,24 @@ const customTheme = {
           },
           red: {
             color: "text-red",
-            border: "border border-red"
+            border: "border border-red",
           },
           green: {
             color: "text-green",
-            border: "border border-green"
+            border: "border border-green",
           },
           slate: {
             color: "text-slate",
-            border: "border border-slate"
+            border: "border border-slate",
           },
           dark: {
             color: "text-dark",
-            border: "border border-dark"
-          }
-        }
-      }
-    }
-  }
+            border: "border border-dark",
+          },
+        },
+      },
+    },
+  },
 };
 
 export function ThemeProvider({ children }: any) {

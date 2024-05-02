@@ -21,44 +21,53 @@ import {
   ChevronDownIcon,
   Bars2Icon,
 } from "@heroicons/react/24/outline";
- 
+
 import ProfileMenu from "./profileMenu";
- 
+
 // account pages menu
 const accountItems = [
   {
     title: "Ingresa",
-    href: "/astro-showcase/login"
+    href: "/astro-showcase/login",
   },
   {
     title: "Crea tu cuenta",
-    href: "/astro-showcase/signup"
-  }
+    href: "/astro-showcase/signup",
+  },
 ];
 
 function AccountListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = accountItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -96,53 +105,62 @@ function AccountListMenu() {
 const navListMenuItems = [
   {
     title: "Nosotros",
-    href: "/astro-showcase/about"
+    href: "/astro-showcase/about",
   },
   {
     title: "Web Informativa",
-    href: "/astro-showcase/landing"
+    href: "/astro-showcase/landing",
   },
   {
     title: "Producto",
-    href: "/astro-showcase/product"
+    href: "/astro-showcase/product",
   },
   {
     title: "Carro de compras",
-    href: "/astro-showcase/shopping-cart"
+    href: "/astro-showcase/shopping-cart",
   },
   {
     title: "Tienda",
-    href: "/astro-showcase/store"
+    href: "/astro-showcase/store",
   },
   {
     title: "Componentes",
-    href: "/astro-showcase/all-components"
-  }
+    href: "/astro-showcase/all-components",
+  },
 ];
- 
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = navListMenuItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -175,25 +193,27 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
- 
+
 // nav list component
 const navListItems = [
   {
     label: "Blog",
     icon: Square3Stack3DIcon,
-    route: "/astro-showcase/blog"
-  }
+    route: "/astro-showcase/blog",
+  },
 ];
- 
+
 function NavList() {
   const [isUserAuth, setIsUserAuth] = React.useState(false);
 
   useEffect(() => {
-    setTimeout( () => {setIsUserAuth(!isUserAuth)}, 8000)
-  }, [isUserAuth])
+    setTimeout(() => {
+      setIsUserAuth(!isUserAuth);
+    }, 8000);
+  }, [isUserAuth]);
 
   return (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">      
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       {navListItems.map(({ label, icon, route }, key) => (
         <Typography
           key={label}
@@ -210,21 +230,17 @@ function NavList() {
         </Typography>
       ))}
       <NavListMenu />
-      { isUserAuth? (
-        <ProfileMenu />
-      ):(
-        <AccountListMenu />
-      )}
+      {isUserAuth ? <ProfileMenu /> : <AccountListMenu />}
     </ul>
   );
 }
- 
+
 export default function ComplexNavbar() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
   const [shouldShowBorder, setShouldShowBorder] = React.useState(false);
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
- 
+
   React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -244,10 +260,10 @@ export default function ComplexNavbar() {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setIsNavOpen(false)
+      () => window.innerWidth >= 960 && setIsNavOpen(false),
     );
   }, []);
- 
+
   return (
     <Navbar
       className={`sticky inset-0 z-10 mx-auto max-w-screen-2xl p-2 lg:pl-6 mt-4 transition-shadow ${
@@ -274,7 +290,7 @@ export default function ComplexNavbar() {
         >
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
-      
+
         {/* Active Redes Sociales
         <a href="https://discord.gg/WCvQWMwT" target="_blank">
           <Button size="sm" color="dark" variant="text">

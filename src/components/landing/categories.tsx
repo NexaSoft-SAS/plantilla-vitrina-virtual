@@ -2,7 +2,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-
   Typography,
 } from "@material-tailwind/react";
 
@@ -66,11 +65,9 @@ export function TeamSectionOne() {
           <Typography variant="h2" color="blue-gray" className="mb-4">
             Compra por categoría
           </Typography>
-          <Typography
-            variant="lead"
-            className="l:px-20 text-blue-gray-800"
-          >
-            Ajustamos cada detalle según tus necesidades para mantener a tus usuarios interesados de manera significativa.
+          <Typography variant="lead" className="l:px-20 text-blue-gray-800">
+            Ajustamos cada detalle según tus necesidades para mantener a tus
+            usuarios interesados de manera significativa.
           </Typography>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

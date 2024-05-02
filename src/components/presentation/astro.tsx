@@ -14,18 +14,22 @@ export function AstroSection() {
             <Typography color="white" className="font-bold">
               Arquitectura web
             </Typography>
-            <Typography
-              variant="h2"
-              color="white"
-              className="mb-5 font-normal"
-            >
+            <Typography variant="h2" color="white" className="mb-5 font-normal">
               ¿Qué es Astro?
             </Typography>
             <Typography variant="lead" color="white">
-              Astro es un framework web todo en uno para crear sitios web rápidos y centrados en el contenido. El marco se basa en la arquitectura Astro Islands, que representa un cambio de paradigma líder para arquitecturas web.
+              Astro es un framework web todo en uno para crear sitios web
+              rápidos y centrados en el contenido. El marco se basa en la
+              arquitectura Astro Islands, que representa un cambio de paradigma
+              líder para arquitecturas web.
             </Typography>
             <a href="/astro-showcase/about">
-              <Button color="white" size="sm" variant="outlined" className="flex items-center mt-12">
+              <Button
+                color="white"
+                size="sm"
+                variant="outlined"
+                className="flex items-center mt-12"
+              >
                 Nosotros
               </Button>
             </a>

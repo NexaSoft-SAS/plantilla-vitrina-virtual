@@ -61,10 +61,7 @@ export function FeatureSectionThree() {
         <div className="mb-20 grid lg:grid-cols-2">
           <div className="grid items-center py-12 px-2 lg:mr-16 lg:py-20">
             <Icon>
-              <ArrowsPointingOutIcon
-                className="h-6 w-6"
-                strokeWidth={2}
-              />
+              <ArrowsPointingOutIcon className="h-6 w-6" strokeWidth={2} />
             </Icon>
             <Typography variant="h3" color="blue-gray" className="mb-4">
               Stand up for every move

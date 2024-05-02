@@ -14,18 +14,20 @@ export function AstroSection() {
             <Typography color="white" className="font-normal opacity-70">
               Vitrina virtual
             </Typography>
-            <Typography
-              variant="h2"
-              color="white"
-              className="mb-5 font-normal"
-            >
+            <Typography variant="h2" color="white" className="mb-5 font-normal">
               Enseñamos tus mejores productos exhibidos directamente en la web!
             </Typography>
             <Typography variant="lead" color="white">
-              Nuestro potente equipo de diseño nos permite crear sitios web de comercio electrónico que encantarán a sus usuarios.
+              Nuestro potente equipo de diseño nos permite crear sitios web de
+              comercio electrónico que encantarán a sus usuarios.
             </Typography>
             <a href="/astro-showcase/about">
-              <Button color="white" size="sm" variant="outlined" className="flex items-center mt-5">
+              <Button
+                color="white"
+                size="sm"
+                variant="outlined"
+                className="flex items-center mt-5"
+              >
                 Nosotros
               </Button>
             </a>

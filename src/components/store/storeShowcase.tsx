@@ -1,16 +1,16 @@
 import data from "assets/json/data.json";
-import CardCategory from '@/components/products/cardCategory';
-import ProductFeature from '@/components/products/productFeature';
-import PromoSectionLarge from '@/components/promo/promoSectionLarge';
-import Footer from '@/components/footer';
-import TestimonialsFade from '@/components/promo/testimonialsFade';
+import CardCategory from "@/components/products/cardCategory";
+import ProductFeature from "@/components/products/productFeature";
+import PromoSectionLarge from "@/components/promo/promoSectionLarge";
+import Footer from "@/components/footer";
+import TestimonialsFade from "@/components/promo/testimonialsFade";
 
 const StoreShowcase = () => {
   return (
     <>
-      <PromoSectionLarge 
+      <PromoSectionLarge
         title={"La ultima colección ya está aquí"}
-        full_description={data.products[0].full_description}  
+        full_description={data.products[0].full_description}
         pageHeaderBgImg={"/astro-showcase/images/bg2.jpg"}
         pageHeaderMinVh="90vh"
       />

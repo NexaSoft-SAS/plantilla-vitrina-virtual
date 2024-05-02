@@ -70,10 +70,7 @@ export function FigmaPresentation() {
                     <StatsCard key={key} {...props} />
                   ))}
                 </div>
-                <a
-                  href="/astro-showcase/landing"
-                  target="_blank"
-                >
+                <a href="/astro-showcase/landing" target="_blank">
                   <Button color="dark" className="flex items-center">
                     Tienda
                   </Button>

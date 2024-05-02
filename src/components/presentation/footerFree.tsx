@@ -1,4 +1,3 @@
-
 import { Typography } from "@material-tailwind/react";
 
 const YEAR = new Date().getFullYear();
@@ -45,7 +44,7 @@ const COMPANY = [
   },
 ];
 
-const HELP = [  
+const HELP = [
   {
     name: "Contáctenos",
     link: "/#",
@@ -178,7 +177,7 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-2 md:justify-between">
           <div className="text-center lg:text-left">
             <div className="text-md mt-2 py-1 font-normal text-gray-600">
-              Copyright &copy; {YEAR}{" "}              
+              Copyright &copy; {YEAR}{" "}
               <a
                 href="https://www.nexasoft.dev"
                 target="_blank"

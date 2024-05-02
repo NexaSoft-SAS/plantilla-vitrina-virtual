@@ -1,8 +1,4 @@
-import {
-  Card,
-  CardBody,
-  Typography,
-} from "@material-tailwind/react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 export function TestimonialSectionTwo() {
   return (
@@ -29,17 +25,10 @@ export function TestimonialSectionTwo() {
                 errores. Estamos constantemente tratando de expresarnos y hacer
                 realidad nuestros sueños. &quot;
               </Typography>
-              <Typography
-                variant="lead"
-                color="white"
-                className="font-medium"
-              >
+              <Typography variant="lead" color="white" className="font-medium">
                 Marcela Glock
               </Typography>
-              <Typography
-                color="white"
-                className="font-normal opacity-70"
-              >
+              <Typography color="white" className="font-normal opacity-70">
                 Directora ejecutiva de Spotify
               </Typography>
             </div>

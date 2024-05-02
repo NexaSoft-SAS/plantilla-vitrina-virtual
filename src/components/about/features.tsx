@@ -29,9 +29,7 @@ function FeatureCard({ icon, title, children }: FeatureCardProps) {
         >
           {title}
         </Typography>
-        <Typography
-          className="px-8 font-normal text-gray-700"
-        >
+        <Typography className="px-8 font-normal text-gray-700">
           {children}
         </Typography>
       </CardBody>
@@ -43,8 +41,7 @@ const features = [
   {
     icon: <EyeIcon className="h-6 w-6" strokeWidth={2} />,
     title: "Equipo experto",
-    description:
-      "Ahora es el momento de destacar y mostrar porque eres único.",
+    description: "Ahora es el momento de destacar y mostrar porque eres único.",
   },
   {
     icon: (
@@ -57,8 +54,7 @@ const features = [
   {
     icon: <BoltIcon className="h-6 w-6" strokeWidth={2} />,
     title: "Revisión de cambios",
-    description:
-      "Estamos aquí para echarte una mano con esos ajustes finos.",
+    description: "Estamos aquí para echarte una mano con esos ajustes finos.",
   },
   {
     icon: <FaceSmileIcon className="h-6 w-6" strokeWidth={2} />,
@@ -94,7 +90,8 @@ export function FeatureSectionOne() {
           variant="lead"
           className="mx-auto w-full px-4 text-blue-gray-800 md:w-10/12 lg:w-7/12 lg:px-8"
         >
-          Estamos constantemente tratando de expresarnos y hacer realidad nuestros sueños
+          Estamos constantemente tratando de expresarnos y hacer realidad
+          nuestros sueños
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-y-20 md:grid-cols-2 lg:grid-cols-3">

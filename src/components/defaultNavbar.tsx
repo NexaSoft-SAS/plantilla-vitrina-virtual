@@ -22,7 +22,7 @@ import {
 
 import ThemeProvider from "./theme-provider";
 import ProfileMenu from "./profileMenu";
- 
+
 const colors = {
   blue: "bg-blue-50 text-blue-500",
   orange: "bg-orange-50 text-orange-500",
@@ -33,42 +33,51 @@ const colors = {
   cyan: "bg-cyan-50 text-cyan-500",
   pink: "bg-pink-50 text-pink-500",
 };
- 
+
 // account pages menu
 const accountItems = [
   {
     title: "Ingresa",
-    href: "/astro-showcase/login"
+    href: "/astro-showcase/login",
   },
   {
     title: "Crea tu cuenta",
-    href: "/astro-showcase/signup"
-  }
+    href: "/astro-showcase/signup",
+  },
 ];
 
 function AccountListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = accountItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -106,53 +115,62 @@ function AccountListMenu() {
 const navListMenuItems = [
   {
     title: "Nosotros",
-    href: "/astro-showcase/about"
+    href: "/astro-showcase/about",
   },
   {
     title: "Web Informativa",
-    href: "/astro-showcase/landing"
+    href: "/astro-showcase/landing",
   },
   {
     title: "Producto",
-    href: "/astro-showcase/product"
+    href: "/astro-showcase/product",
   },
   {
     title: "Carro de compras",
-    href: "/astro-showcase/shopping-cart"
+    href: "/astro-showcase/shopping-cart",
   },
   {
     title: "Tienda",
-    href: "/astro-showcase/store"
+    href: "/astro-showcase/store",
   },
   {
     title: "Componentes",
-    href: "/astro-showcase/all-components"
-  }
+    href: "/astro-showcase/all-components",
+  },
 ];
- 
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
+
   const triggers = {
     onMouseEnter: () => setIsMenuOpen(true),
     onMouseLeave: () => setIsMenuOpen(false),
   };
- 
+
   const renderItems = navListMenuItems.map(({ title, href }) => (
     <a href={href} key={title}>
       <MenuItem>
-        <Typography variant="paragraph" color="blue-gray" className="mb-1 font-normal">
+        <Typography
+          variant="paragraph"
+          color="blue-gray"
+          className="mb-1 font-normal"
+        >
           {title}
         </Typography>
       </MenuItem>
     </a>
   ));
- 
+
   return (
     <React.Fragment>
       <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-normal outline-none focus:outline-none">
+          <Typography
+            as="a"
+            href="#"
+            variant="small"
+            className="font-normal outline-none focus:outline-none"
+          >
             <MenuItem
               {...triggers}
               className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
@@ -185,7 +203,7 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
- 
+
 function NavList() {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
@@ -206,22 +224,24 @@ function NavList() {
     </List>
   );
 }
- 
+
 export default function Example() {
   const [openNav, setOpenNav] = React.useState(false);
   const [isUserAuth, setIsUserAuth] = React.useState(false);
 
-  React.useEffect(()=>{
-    setTimeout( () => {setIsUserAuth(!isUserAuth)}, 8000)
-  }, [isUserAuth])
- 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsUserAuth(!isUserAuth);
+    }, 8000);
+  }, [isUserAuth]);
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
+      () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
- 
+
   return (
     <ThemeProvider>
       <Navbar className="absolute mx-auto left-0 right-0 top-3 max-w-screen-xl px-4 py-2 z-10">
@@ -237,9 +257,9 @@ export default function Example() {
           <div className="hidden lg:block">
             <NavList />
           </div>
-          { isUserAuth? (
+          {isUserAuth ? (
             <ProfileMenu />
-          ):(
+          ) : (
             <div className="hidden gap-2 lg:flex">
               <a href="./login">
                 <Button variant="text" size="sm" color="blue-gray">
@@ -253,7 +273,7 @@ export default function Example() {
               </a>
             </div>
           )}
-          
+
           <IconButton
             variant="text"
             color="blue-gray"
@@ -269,9 +289,9 @@ export default function Example() {
         </div>
         <Collapse open={openNav}>
           <NavList />
-          { isUserAuth? (
+          {isUserAuth ? (
             <ProfileMenu />
-          ):(
+          ) : (
             <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
               <a href="/astro-showcase/login">
                 <Button variant="outlined" size="sm" color="dark" fullWidth>

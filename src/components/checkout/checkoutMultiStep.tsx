@@ -1,11 +1,11 @@
-import PaymentDetails from './paymentDetails';
-import ShippingInfo from './shippingInfo';
-import OrderSummary from '../cart/orderSummary';
-import CheckoutSingleItemDark from '../checkout/checkoutSingleItemDark';
-import ReviewRating from '../reviews/reviewRating';
+import PaymentDetails from "./paymentDetails";
+import ShippingInfo from "./shippingInfo";
+import OrderSummary from "../cart/orderSummary";
+import CheckoutSingleItemDark from "../checkout/checkoutSingleItemDark";
+import ReviewRating from "../reviews/reviewRating";
 
 interface Props {
-  products: ({
+  products: {
     thumb_src: string;
     thumb_alt: string;
     color: string;
@@ -16,17 +16,12 @@ interface Props {
     subtotal: number;
     shipping: number;
     tax: number;
-  })[];
+  }[];
 }
 
-export default function CheckoutSummary({
-  products,
-}: Props) {
-
+export default function CheckoutSummary({ products }: Props) {
   let subtotalCheckout = 0;
-  products.map(product => 
-    subtotalCheckout += product.price
-  )
+  products.map((product) => (subtotalCheckout += product.price));
 
   return (
     <>
@@ -38,43 +33,51 @@ export default function CheckoutSummary({
               Apple Pay
             </button>
             <div className="mt-2 mb-4 position-relative text-center">
-              <p className="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">o</p>
+              <p className="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
+                o
+              </p>
             </div>
             <h5 className="mb-4">Información del contacto</h5>
             <div className="form-group">
               <label>Dirección de correo electrónico</label>
-              <input type="email" className="form-control" placeholder="Ingresa tu dirección de correo electrónico" />
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Ingresa tu dirección de correo electrónico"
+              />
             </div>
             <div className="form-group">
               <label>Número de teléfono</label>
-              <input type="text" className="form-control" placeholder="Ingresa tu número de teléfono" />
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Ingresa tu número de teléfono"
+              />
             </div>
-            
+
             <PaymentDetails />
 
             <ShippingInfo />
-            
 
-            <button className="btn btn-dark w-100 mt-4">Continuar</button>        
+            <button className="btn btn-dark w-100 mt-4">Continuar</button>
           </div>
           <div className="col-12 col-lg-6 p-lg-5">
             <small className="opacity-6">Valor</small>
             <h3 className="mb-5">${subtotalCheckout.toLocaleString()}</h3>
-            {products.map((product, i) => 
-                <CheckoutSingleItemDark
-                  thumb_src={product.thumb_src}
-                  thumb_alt={product.thumb_alt}
-                  title={product.title}
-                  color={product.color}
-                  size={product.size}
-                  price={product.price}
-                />
-            )}
-            <OrderSummary subtotal={subtotalCheckout}/>
+            {products.map((product, i) => (
+              <CheckoutSingleItemDark
+                thumb_src={product.thumb_src}
+                thumb_alt={product.thumb_alt}
+                title={product.title}
+                color={product.color}
+                size={product.size}
+                price={product.price}
+              />
+            ))}
+            <OrderSummary subtotal={subtotalCheckout} />
           </div>
         </div>
       </section>
     </>
   );
-};
-
+}

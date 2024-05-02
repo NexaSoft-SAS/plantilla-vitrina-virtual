@@ -9,9 +9,9 @@ import StoreDoubleColumn from "@/components/store/storeDoubleColumn";
 const Shoppings = () => {
   let cartItems: any[] = [];
   data.shoppingCart.map((id) =>
-    data.products.filter((x) => x.id == id).map((x) => cartItems.push(x))
+    data.products.filter((x) => x.id == id).map((x) => cartItems.push(x)),
   );
-  
+
   return (
     <>
       <Navbar />

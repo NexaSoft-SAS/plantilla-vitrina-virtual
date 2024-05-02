@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  Button,
-  Typography,
-} from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 import ThemeProvider from "../theme-provider";
 import Navbar from "../navbar";
-import {
-  ArrowSmallRightIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 
 export function HeroPresentation() {
- 
   return (
     <ThemeProvider>
       <Navbar />
@@ -37,10 +31,12 @@ export function HeroPresentation() {
               color="blue-gray"
               className="mb-8 lg:mr-32 leading-tight font-black"
             >
-              Un sitio web perfecto para crear tu <span className="text-blue">Tienda Virtual</span>
+              Un sitio web perfecto para crear tu{" "}
+              <span className="text-blue">Tienda Virtual</span>
             </Typography>
             <Typography variant="lead" color="blue-gray" className="lg:pr-32">
-              Diseñamos una pagina ligera y rica en funciones. Viene con todo lo que necesitas para tener tu tienda en linea lista en poco tiempo.
+              Diseñamos una pagina ligera y rica en funciones. Viene con todo lo
+              que necesitas para tener tu tienda en linea lista en poco tiempo.
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
               <a href="/astro-showcase/landing">
@@ -52,7 +48,11 @@ export function HeroPresentation() {
           </div>
         </div>
         <div className="hidden lg:flex">
-          <img src="/astro-showcase/header.png" alt="components" className="absolute -top-10 right-0 w-1/2" />
+          <img
+            src="/astro-showcase/header.png"
+            alt="components"
+            className="absolute -top-10 right-0 w-1/2"
+          />
         </div>
       </header>
     </ThemeProvider>

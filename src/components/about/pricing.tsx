@@ -3,19 +3,13 @@ import { CheckIcon, MinusIcon } from "@heroicons/react/24/outline";
 
 function Check() {
   return (
-    <CheckIcon
-      className="mx-auto h-5 w-5 text-green-500"
-      strokeWidth={2}
-    />
+    <CheckIcon className="mx-auto h-5 w-5 text-green-500" strokeWidth={2} />
   );
 }
 
 function Minus() {
   return (
-    <MinusIcon
-      className="mx-auto h-5 w-5 text-blue-gray-700"
-      strokeWidth={2}
-    />
+    <MinusIcon className="mx-auto h-5 w-5 text-blue-gray-700" strokeWidth={2} />
   );
 }
 
@@ -90,11 +84,7 @@ export function PricingSectionThree() {
                     </Typography>
                   </th>
                   <th className="px-6 py-3 text-center">
-                    <Typography
-                      variant="h6"
-                      color="blue-gray"
-                      className="mb-2"
-                    >
+                    <Typography variant="h6" color="blue-gray" className="mb-2">
                       Team
                     </Typography>
                     <Typography variant="h5" color="blue-gray">
@@ -102,11 +92,7 @@ export function PricingSectionThree() {
                     </Typography>
                   </th>
                   <th className="px-6 py-3 text-center">
-                    <Typography
-                      variant="h6"
-                      color="blue-gray"
-                      className="mb-2"
-                    >
+                    <Typography variant="h6" color="blue-gray" className="mb-2">
                       Growth
                     </Typography>
                     <Typography variant="h5" color="blue-gray">
@@ -114,11 +100,7 @@ export function PricingSectionThree() {
                     </Typography>
                   </th>
                   <th className="px-6 py-3 text-center">
-                    <Typography
-                      variant="h6"
-                      color="blue-gray"
-                      className="mb-2"
-                    >
+                    <Typography variant="h6" color="blue-gray" className="mb-2">
                       Enterprise
                     </Typography>
                     <Typography variant="h5" color="blue-gray">
@@ -138,15 +120,9 @@ export function PricingSectionThree() {
                         {plan[0]}
                       </Typography>
                     </td>
-                    <td className="px-6 py-5 text-center">
-                      {plan[1]}
-                    </td>
-                    <td className="px-6 py-5 text-center">
-                      {plan[2]}
-                    </td>
-                    <td className="px-6 py-5 text-center">
-                      {plan[3]}
-                    </td>
+                    <td className="px-6 py-5 text-center">{plan[1]}</td>
+                    <td className="px-6 py-5 text-center">{plan[2]}</td>
+                    <td className="px-6 py-5 text-center">{plan[3]}</td>
                   </tr>
                 ))}
                 <tr>

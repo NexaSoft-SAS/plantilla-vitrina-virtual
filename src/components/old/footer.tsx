@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="copyright text-center text-sm text-muted text-lg-start">
               Copyright ©{" "}
               <script>document.write(new Date().getFullYear())</script>
-              &nbsp;by 
+              &nbsp;by
               <a
                 href="https://www.nexasoft.dev"
                 className="text-dark ms-1"
@@ -63,5 +63,3 @@ export default function Footer() {
     </>
   );
 }
-
-

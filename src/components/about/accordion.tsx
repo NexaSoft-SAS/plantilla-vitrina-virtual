@@ -4,7 +4,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
- 
+
 function Icon({ id, open }) {
   return (
     <svg
@@ -21,14 +21,14 @@ function Icon({ id, open }) {
     </svg>
   );
 }
- 
+
 export default function Example() {
   const [open, setOpen] = useState(0);
- 
+
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
- 
+
   return (
     <Fragment>
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>

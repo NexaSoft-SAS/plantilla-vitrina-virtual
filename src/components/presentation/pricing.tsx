@@ -50,7 +50,8 @@ export function PricingSectionOne() {
             Elige el mejor plan para ti
           </Typography>
           <Typography className="mb-8 font-normal !text-gray-500">
-            Tienes derecho a actualizaciones ilimitadas y soporte premium en cada paquete.
+            Tienes derecho a actualizaciones ilimitadas y soporte premium en
+            cada paquete.
           </Typography>
         </div>
         <div className="mt-12">
@@ -97,10 +98,7 @@ export function PricingSectionOne() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="/astro-showcase/login"
-                  target="_blank"
-                >
+                <a href="/astro-showcase/login" target="_blank">
                   <Button
                     size="sm"
                     variant="gradient"
@@ -141,7 +139,7 @@ export function PricingSectionOne() {
               </CardHeader>
               <CardBody className="text-center">
                 <ul className="flex flex-col mb-8 px-5">
-                {include.map(({ title }) => (
+                  {include.map(({ title }) => (
                     <li
                       key={title}
                       className="flex items-center justify-center gap-3 border-b py-4 text-gray-700"

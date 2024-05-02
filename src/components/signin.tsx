@@ -1,6 +1,6 @@
 import ThemeProvider from "./theme-provider";
-import Navbar from "./defaultNavbar"
- 
+import Navbar from "./defaultNavbar";
+
 import { Typography, Input, Checkbox, Button } from "@material-tailwind/react";
 
 export function SignIn() {
@@ -10,7 +10,7 @@ export function SignIn() {
       <section className="grid h-screen items-center lg:grid-cols-2">
         <div className="my-auto p-8 text-center sm:p-10 md:p-20 xl:px-32 xl:py-24">
           <Typography variant="h3" color="blue-gray" className="mb-2">
-            Bienvenido de nuevo 
+            Bienvenido de nuevo
           </Typography>
           <Typography className="font-normal mb-16 text-blue-gray-800">
             Por favor ingresa tus datos.
@@ -18,10 +18,22 @@ export function SignIn() {
 
           <form action="#" className="mx-auto max-w-[24rem] text-left">
             <div className="mb-4">
-              <Input color="black" size="lg" label="Correo electrónico" type="email" name="email" />
+              <Input
+                color="black"
+                size="lg"
+                label="Correo electrónico"
+                type="email"
+                name="email"
+              />
             </div>
             <div className="mb-4">
-              <Input color="black" size="lg" label="Contraseña" type="password" name="password" />
+              <Input
+                color="black"
+                size="lg"
+                label="Contraseña"
+                type="password"
+                name="password"
+              />
             </div>
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="-ml-3">
@@ -33,7 +45,12 @@ export function SignIn() {
                   }}
                 />
               </div>
-              <Typography as="a" href="#" color="blue-gray" className="font-medium">
+              <Typography
+                as="a"
+                href="#"
+                color="blue-gray"
+                className="font-medium"
+              >
                 Has olvidado tu contraseña
               </Typography>
             </div>
@@ -62,7 +79,6 @@ export function SignIn() {
           className="hidden h-screen w-full object-cover lg:block"
         />
       </section>
-    
     </ThemeProvider>
   );
 }

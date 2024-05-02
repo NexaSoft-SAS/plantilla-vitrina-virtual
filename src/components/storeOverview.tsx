@@ -37,11 +37,11 @@ document.getElementById("heart1")?.addEventListener("click", toggleHeart);
 const StoreOverview = () => {
   let cartItems: any[] = [];
   data.shoppingCart.map((id) =>
-    data.products.filter((x) => x.id == id).map((x) => cartItems.push(x))
+    data.products.filter((x) => x.id == id).map((x) => cartItems.push(x)),
   );
   let cartItems2: any[] = [];
   data.shoppingCart2.map((id) =>
-    data.products.filter((x) => x.id == id).map((x) => cartItems2.push(x))
+    data.products.filter((x) => x.id == id).map((x) => cartItems2.push(x)),
   );
 
   // filter reviews with ID 01

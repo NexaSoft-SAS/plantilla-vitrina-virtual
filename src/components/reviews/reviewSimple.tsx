@@ -1,4 +1,4 @@
-import ReviewComment from './reviewComment';
+import ReviewComment from "./reviewComment";
 
 interface Props {
   reviews: {
@@ -7,20 +7,14 @@ interface Props {
     date: string;
     rating: number;
     comment: string;
-  }[]
+  }[];
 }
 
-export default function ReviewSimple({
-  reviews
-}: Props) {
+export default function ReviewSimple({ reviews }: Props) {
+  let CommentsList: any[] = [];
 
-  let CommentsList = [];
-
-  reviews.map(review => {  
-
-    CommentsList.push(
-      <ReviewComment review={review} /> 
-    )
+  reviews.map((review) => {
+    CommentsList.push(<ReviewComment review={review} />);
   });
   return (
     <>
@@ -28,10 +22,7 @@ export default function ReviewSimple({
         <h3>La opinión de nuestros clientes</h3>
         <p>Romper con las fronteras y limitaciones es posible.</p>
       </div>
-      <div className="w-100 w-md-80 w-lg-60 mx-auto">
-        {CommentsList}
-      </div>
+      <div className="w-100 w-md-80 w-lg-60 mx-auto">{CommentsList}</div>
     </>
-    
   );
-};
+}
