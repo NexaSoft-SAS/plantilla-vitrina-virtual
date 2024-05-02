@@ -1,0 +1,6 @@
+{
+	"runtime": "nodejs20.x",
+	"handler": "media/oem/MyFiles/8_DEVELOPMENT/popular-point/.vercel/output/_functions/entry.mjs",
+	"launcherType": "Nodejs",
+	"supportsResponseStreaming": true
+}

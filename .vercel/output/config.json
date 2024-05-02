@@ -1,0 +1,64 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_image$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/404\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/about\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/all-components\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/landing\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/login\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/product\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/shopping-cart\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/signup\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/store\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "_render"
+		},
+		{
+			"src": "/.*",
+			"dest": "_render",
+			"status": 404
+		}
+	]
+}
