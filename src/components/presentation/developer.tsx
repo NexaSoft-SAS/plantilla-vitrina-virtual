@@ -30,7 +30,7 @@ export function DevPresentation() {
             </Typography>
           </div>
           <img
-            src="consistenly.png"
+            src="/astro-showcase/consistenly.png"
             alt="components"
             className="mx-auto hidden md:flex md:w-1/2"
           />

@@ -8,17 +8,17 @@ import {
   MenuHandler,
   MenuList,
   MenuItem,
-  Avatar,
-  Card,
+  // Avatar,
+  // Card,
   IconButton,
 } from "@material-tailwind/react";
 import {
-  CubeTransparentIcon,
-  CodeBracketSquareIcon,
+  // CubeTransparentIcon,
+  // CodeBracketSquareIcon,
+  // Cog6ToothIcon,
+  // InboxArrowDownIcon,
   Square3Stack3DIcon,
   ChevronDownIcon,
-  Cog6ToothIcon,
-  InboxArrowDownIcon,
   Bars2Icon,
 } from "@heroicons/react/24/outline";
  
@@ -28,11 +28,11 @@ import ProfileMenu from "./profileMenu";
 const accountItems = [
   {
     title: "Ingresa",
-    href: "/astro-launch-ui/login"
+    href: "/astro-showcase/login"
   },
   {
     title: "Crea tu cuenta",
-    href: "/astro-launch-ui/signup"
+    href: "/astro-showcase/signup"
   }
 ];
 
@@ -96,27 +96,27 @@ function AccountListMenu() {
 const navListMenuItems = [
   {
     title: "Nosotros",
-    href: "/astro-launch-ui/about"
+    href: "/astro-showcase/about"
   },
   {
     title: "Web Informativa",
-    href: "/astro-launch-ui/landing"
+    href: "/astro-showcase/landing"
   },
   {
     title: "Producto",
-    href: "/astro-launch-ui/product"
+    href: "/astro-showcase/product"
   },
   {
     title: "Carro de compras",
-    href: "/astro-launch-ui/shopping-cart"
+    href: "/astro-showcase/shopping-cart"
   },
   {
     title: "Tienda",
-    href: "/astro-launch-ui/store"
+    href: "/astro-showcase/store"
   },
   {
-    title: "Home2",
-    href: "/astro-launch-ui/index2"
+    title: "Componentes",
+    href: "/astro-showcase/all-components"
   }
 ];
  
@@ -181,7 +181,7 @@ const navListItems = [
   {
     label: "Blog",
     icon: Square3Stack3DIcon,
-    route: "/astro-launch-ui/blog"
+    route: "/astro-showcase/blog"
   }
 ];
  
@@ -281,12 +281,12 @@ export default function ComplexNavbar() {
             <i className="fab fa-discord text-lg leading-none" aria-hidden="true"></i>
           </Button>
         </a>
-        <a href="https://github.com/creativetimofficial/astro-launch-ui" target="_blank">
+        <a href="https://github.com/creativetimofficial/astro-showcase" target="_blank">
           <Button size="sm" color="dark" variant="text">
             <i className="fab fa-github text-xl leading-none" aria-hidden="true"></i>
           </Button>
         </a> */}
-        <a href="/astro-launch-ui/landing">
+        <a href="/astro-showcase/landing">
           <Button color="dark">Ver Tienda</Button>
         </a>
       </div>

@@ -5,9 +5,10 @@ interface Props {
     orderNumber: string,
     products: 
     {
-      id: string,
-      status: string,
-      quantity: number
+      id: string;
+      status: string;
+      dateModified: string;
+      quantity?: number
     }[],
     address: string,
     email: string,
@@ -33,10 +34,10 @@ export default function OrderHistory({
   products
 }: Props) {
 
-  let orderHistoryCards = [];
+  let orderHistoryCards : any[] = [];
 
   orders.forEach(order => {
-    let orderProducts = [];
+    let orderProducts : any[] = [];
 
     order.products.forEach(productDetails => {
       products.forEach(product => {

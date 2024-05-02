@@ -67,7 +67,7 @@ const HELP = [
 const RESOURCES = [
   {
     name: "Documentation",
-    link: "https://www.creative-tim.com/learning-lab/astro/overview/astro-launch-ui?ref=astrolaunch-ui",
+    link: "https://www.creative-tim.com/learning-lab/astro/overview/astro-showcase?ref=astrolaunch-ui",
   },
   {
     name: "Custom Development",

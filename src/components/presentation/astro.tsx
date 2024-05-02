@@ -24,7 +24,7 @@ export function AstroSection() {
             <Typography variant="lead" color="white">
               Astro es un framework web todo en uno para crear sitios web rápidos y centrados en el contenido. El marco se basa en la arquitectura Astro Islands, que representa un cambio de paradigma líder para arquitecturas web.
             </Typography>
-            <a href="/astro-launch-ui/about">
+            <a href="/astro-showcase/about">
               <Button color="white" size="sm" variant="outlined" className="flex items-center mt-12">
                 Nosotros
               </Button>
@@ -32,7 +32,7 @@ export function AstroSection() {
           </CardBody>
           <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12">
             <img
-              src="astro.png"
+              src="/astro-showcase/astro.png"
               alt="astro"
               className="h-full w-full object-cover md:absolute"
             />

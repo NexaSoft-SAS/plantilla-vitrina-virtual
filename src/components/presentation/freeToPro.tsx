@@ -71,7 +71,7 @@ export function FigmaPresentation() {
                   ))}
                 </div>
                 <a
-                  href="/astro-launch-ui/landing"
+                  href="/astro-showcase/landing"
                   target="_blank"
                 >
                   <Button color="dark" className="flex items-center">
@@ -81,7 +81,7 @@ export function FigmaPresentation() {
               </div>
             </div>
             <img
-              src="components.png"
+              src="/astro-showcase/components.png"
               alt="iphone"
               className="lg:w-1/2 rounded-3xl hidden md:flex ml-auto lg:absolute -right-32 -top-24"
             />

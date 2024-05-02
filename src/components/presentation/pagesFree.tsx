@@ -63,22 +63,22 @@ function BlogPostCard({ img, title, desc, url }: BlogPostCardPropsType) {
 
 const posts = [
   {
-    img: "aboutus.jpg",
+    img: "/astro-showcase/aboutus.jpg",
     title: "Nosotros",
     desc: "Diseñado para presentar el propósito del sitio web y animar al usuario a realizar una acción.",
-    url: "/astro-launch-ui/about",
+    url: "/astro-showcase/about",
   },
   {
-    img: "signin.jpg",
+    img: "/astro-showcase/signin.jpg",
     title: "Ingresa",
     desc: "Está diseñado para proporcionar al usuario toda la información necesaria para un inicio de sesión seguro.",
-    url: "/astro-launch-ui/login",
+    url: "/astro-showcase/login",
   },
   {
-    img: "404.jpg",
+    img: "/astro-showcase/404.jpg",
     title: "Página Error 404",
     desc: "Si busca información esencial para tomar una decisión, nuestro sitio web lo tiene todo, pero no en esta página.",
-    url: "/astro-launch-ui/404",
+    url: "/astro-showcase/404",
   },
 ];
 

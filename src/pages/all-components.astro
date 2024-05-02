@@ -1,0 +1,12 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import StoreOverview from '@/components/storeOverview';
+import Navbar from '@/components/navbar';
+---
+
+<Layout title="Vitrina virtual">
+	<main>
+    <Navbar client:only="react" />
+    <StoreOverview  client:only="react" />
+	</main>
+</Layout>

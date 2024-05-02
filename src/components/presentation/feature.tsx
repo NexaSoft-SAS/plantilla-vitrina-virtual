@@ -26,19 +26,19 @@ function FeatureCard({ icon, title, children }) {
 
 const features = [
   {
-    icon: <img className="w-32 mx-auto mb-4" src="icon3.png" />,
+    icon: <img className="w-32 mx-auto mb-4" src="/astro-showcase/icon3.png" />,
     title: "Para tus clientes",
     description:
       "Un lugar repleto de componentes atractivos, información de utilidad y gestor de compras en linea.",
   },
   {
-    icon: <img className="w-32 mx-auto mb-4" src="icon1.png" />,
+    icon: <img className="w-32 mx-auto mb-4" src="/astro-showcase/icon1.png" />,
     title: "Para tu negocio",
     description:
       "Ahorre tiempo y dinero ayudando a su equipo a centrarse en atención personalizada y en mejorar las funciones de tu producto.",
   },
   {
-    icon: <img className="w-32 mx-auto mb-4" src="icon2.png" />,
+    icon: <img className="w-32 mx-auto mb-4" src="/astro-showcase/icon2.png" />,
     title: "Para ti",
     description:
       "Ahorre meses de trabajo cuando utilices tareas automatizadas en nuestras páginas completamente codificadas.",

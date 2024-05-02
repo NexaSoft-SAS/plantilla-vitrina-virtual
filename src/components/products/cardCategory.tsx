@@ -1,7 +1,7 @@
 interface Props {
   thumb_src: string;
   title: string;
-  collection: string;
+  collection?: string;
   classList?: string;
   cta?: string;
 }
@@ -27,7 +27,7 @@ export default function CardProduct({
               <p className="text-white font-weight-bold mb-1">{collection}</p>
               <h4 className="text-white font-weight-bolder">{title}</h4>
               {/* {(cta != null) &&  */}
-                <a href="#" className="text-white text-sm font-weight-semibold mb-0">Ver productos &#62;</a>  
+                <span className="text-white text-sm font-weight-semibold mb-0"> &#62; Ver productos</span>  
               {/* } */}
             </div>
           </div>

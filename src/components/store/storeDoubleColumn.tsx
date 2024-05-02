@@ -1,9 +1,11 @@
-export default function StoreNavigationDoubleColumn() {
+export default function StoreNavigationDoubleColumn(
+  title? : string
+) {
   return (
     <>
     <div className="row mt-5">
       <div className="col-12 col-lg-6 mb-4 mb-lg-0">
-        <h6 className="w-100 pb-3 border-bottom">Tienda</h6>
+        <h6 className="w-100 pb-3 border-bottom"> Tienda </h6> {/* {!title || 'Tienda'} */}
         <div className="d-flex pt-2">
           <ul className="nav flex-column ms-n3">
             <li className="nav-item">

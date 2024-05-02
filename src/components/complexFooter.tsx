@@ -1,5 +1,5 @@
-import data from '../../public/data.json';
-import StoreDoubleColumn from '../components/store/storeDoubleColumn';
+import data from "assets/json/data.json";
+import StoreDoubleColumn from '@/components/store/storeDoubleColumn';
 
 export default function ComplexFooter() {
   return (

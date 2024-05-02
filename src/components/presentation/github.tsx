@@ -24,7 +24,7 @@ export function AstroSection() {
             <Typography variant="lead" color="white">
               Nuestro potente equipo de diseño nos permite crear sitios web de comercio electrónico que encantarán a sus usuarios.
             </Typography>
-            <a href="/astro-launch-ui/about">
+            <a href="/astro-showcase/about">
               <Button color="white" size="sm" variant="outlined" className="flex items-center mt-5">
                 Nosotros
               </Button>
@@ -32,7 +32,7 @@ export function AstroSection() {
           </CardBody>
           <div className="relative grid h-96 place-items-center md:h-auto md:w-5/12">
             <img
-              src="github.png"
+              src="/astro-showcase/github.png"
               alt="github"
               className="h-full w-full object-cover md:absolute"
             />

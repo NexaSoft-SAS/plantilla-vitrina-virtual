@@ -43,7 +43,7 @@ export function HeroPresentation() {
               Diseñamos una pagina ligera y rica en funciones. Viene con todo lo que necesitas para tener tu tienda en linea lista en poco tiempo.
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
-              <a href="/astro-launch-ui/landing">
+              <a href="/astro-showcase/landing">
                 <Button color="dark" className="flex items-center">
                   Ver Tienda
                 </Button>
@@ -52,7 +52,7 @@ export function HeroPresentation() {
           </div>
         </div>
         <div className="hidden lg:flex">
-          <img src="header.png" alt="components" className="absolute -top-10 right-0 w-1/2" />
+          <img src="/astro-showcase/header.png" alt="components" className="absolute -top-10 right-0 w-1/2" />
         </div>
       </header>
     </ThemeProvider>

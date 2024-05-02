@@ -14,7 +14,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   ├── input.css
 │   │   └── material-tailwind.css
 │   ├── js
-│   │   └── astro-launch-ui.min.js
+│   │   └── astro-showcase.min.js
 │   └── scss
 │       └── loading-dot.css
 ├── astro.config.mjs
@@ -36,7 +36,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   ├── store.astro
 │   │   ├── product.astro
 │   │   ├── shopping-cart.astro
-│   │   ├── index2.astro
+│   │   ├── all-components.astro
 ├── tailwind.config.js
 └── tsconfig.json
 ```

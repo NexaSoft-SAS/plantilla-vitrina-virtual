@@ -98,7 +98,7 @@ export function PricingSectionOne() {
                   ))}
                 </ul>
                 <a
-                  href="/astro-launch-ui/login"
+                  href="/astro-showcase/login"
                   target="_blank"
                 >
                   <Button

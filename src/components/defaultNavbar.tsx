@@ -38,11 +38,11 @@ const colors = {
 const accountItems = [
   {
     title: "Ingresa",
-    href: "/astro-launch-ui/login"
+    href: "/astro-showcase/login"
   },
   {
     title: "Crea tu cuenta",
-    href: "/astro-launch-ui/signup"
+    href: "/astro-showcase/signup"
   }
 ];
 
@@ -106,27 +106,27 @@ function AccountListMenu() {
 const navListMenuItems = [
   {
     title: "Nosotros",
-    href: "/astro-launch-ui/about"
+    href: "/astro-showcase/about"
   },
   {
     title: "Web Informativa",
-    href: "/astro-launch-ui/landing"
+    href: "/astro-showcase/landing"
   },
   {
     title: "Producto",
-    href: "/astro-launch-ui/product"
+    href: "/astro-showcase/product"
   },
   {
     title: "Carro de compras",
-    href: "/astro-launch-ui/shopping-cart"
+    href: "/astro-showcase/shopping-cart"
   },
   {
     title: "Tienda",
-    href: "/astro-launch-ui/store"
+    href: "/astro-showcase/store"
   },
   {
-    title: "Home2",
-    href: "/astro-launch-ui/index2"
+    title: "Componentes",
+    href: "/astro-showcase/all-components"
   }
 ];
  
@@ -193,7 +193,7 @@ function NavList() {
       <AccountListMenu />
       <Typography
         as="a"
-        href="https://www.creative-tim.com/learning-lab/astro/quick-start/astro-launch-ui/"
+        href="https://www.creative-tim.com/learning-lab/astro/quick-start/astro-showcase/"
         variant="small"
         color="blue-gray"
         className="font-normal"
@@ -228,7 +228,7 @@ export default function Example() {
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
-            href="/astro-launch-ui/"
+            href="/astro-showcase/"
             variant="h6"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
           >
@@ -246,7 +246,7 @@ export default function Example() {
                   Ingresa
                 </Button>
               </a>
-              <a href="/astro-launch-ui/signup">
+              <a href="/astro-showcase/signup">
                 <Button size="sm" color="dark">
                   Crea tu cuenta
                 </Button>
@@ -273,12 +273,12 @@ export default function Example() {
             <ProfileMenu />
           ):(
             <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-              <a href="/astro-launch-ui/login">
+              <a href="/astro-showcase/login">
                 <Button variant="outlined" size="sm" color="dark" fullWidth>
                   Ingresa
                 </Button>
               </a>
-              <a href="/astro-launch-ui/signup">
+              <a href="/astro-showcase/signup">
                 <Button size="sm" fullWidth color="dark">
                   Crea tu cuenta
                 </Button>

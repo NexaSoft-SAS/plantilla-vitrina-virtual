@@ -6,7 +6,7 @@ export default function ProductAccordion({
   data
 }: Props) {
 
-  const accordion = [];
+  const accordion : any [] = [];
   let i = 0;
 
   Object.entries(data).map(([title,value],i) => {
@@ -49,7 +49,7 @@ export default function ProductAccordion({
 
   return (
     <>
-      <div className="accordion mt-5" id="accordionEcommerce">
+      <div className="accordion mt-5" id="accordionEcommerce" key={data.size}>
         {accordion}
       </div>
     </>

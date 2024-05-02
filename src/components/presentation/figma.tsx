@@ -85,7 +85,7 @@ export function FigmaPresentation() {
                 </Button>
               </a>
             </div>
-            <img src="components.png" alt="iphone" className="lg:w-1/2 rounded-3xl hidden md:flex ml-auto lg:absolute -right-32 -top-24" />
+            <img src="/astro-showcase/components.png" alt="iphone" className="lg:w-1/2 rounded-3xl hidden md:flex ml-auto lg:absolute -right-32 -top-24" />
           </div>
         </div>
       </div>

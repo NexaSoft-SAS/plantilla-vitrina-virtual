@@ -9,7 +9,7 @@ interface Props {
     date: string;
     rating: number;
     comment: string;
-    productID: number;
+    productID: string; // number
   }[]
 }
 
@@ -17,8 +17,8 @@ export default function ReviewSummaryChart({
   reviews
 }: Props) {
 
-  let CommentsList = [];
-  let rating = 0;  
+  let CommentsList : any[] = [];
+  let rating : number = 0;  
 
   reviews.map(review => {  
     rating += review.rating;

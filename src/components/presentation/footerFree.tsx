@@ -29,19 +29,19 @@ const SOCIAL_MEDIA = [
 const COMPANY = [
   {
     name: "Nosotros",
-    link: "/astro-launch-ui/about",
+    link: "/astro-showcase/about",
   },
   {
     name: "Soluciones",
-    link: "/astro-launch-ui/",
+    link: "/astro-showcase/",
   },
   {
     name: "Tutoriales",
-    link: "/astro-launch-ui/",
+    link: "/astro-showcase/",
   },
   {
     name: "Lanzamientos",
-    link: "/astro-launch-ui/",
+    link: "/astro-showcase/",
   },
 ];
 
@@ -63,27 +63,27 @@ const HELP = [
 const RESOURCES = [
   {
     name: "Blog",
-    link: "/astro-launch-ui/blog",
+    link: "/astro-showcase/blog",
   },
   {
     name: "Boletín Informativo",
-    link: "/astro-launch-ui/blog",
+    link: "/astro-showcase/blog",
   },
   {
     name: "Eventos",
-    link: "/astro-launch-ui/blog",
+    link: "/astro-showcase/blog",
   },
   {
     name: "Ayuda",
-    link: "/astro-launch-ui/blog",
+    link: "/astro-showcase/blog",
   },
   {
     name: "Tutoriales",
-    link: "/astro-launch-ui/blog",
+    link: "/astro-showcase/blog",
   },
   {
     name: "Soporte",
-    link: "/astro-launch-ui/blog",
+    link: "/astro-showcase/blog",
   },
 ];
 

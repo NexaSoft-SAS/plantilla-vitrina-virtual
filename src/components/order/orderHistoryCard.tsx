@@ -5,9 +5,10 @@ interface Props {
     orderNumber: string,
     products: 
     {
-      id: string,
-      status: string,
+      id: string;
+      status: string;
       dateModified: string;
+      quantity?: number
     }[],
     address: string,
     email: string,
@@ -33,7 +34,7 @@ export default function OrderHistoryCard({
   order
 }: Props) {
 
-  let orderHistoryCards = [];
+  let orderHistoryCards : any[] = [];
 
   order.products.map(productDetails => {  
     let productStatus = "";

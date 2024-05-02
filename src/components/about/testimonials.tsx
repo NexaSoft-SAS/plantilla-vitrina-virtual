@@ -15,7 +15,7 @@ export function TestimonialSectionTwo() {
           <CardBody className="flex flex-col-reverse gap-16 py-20 px-14 lg:flex-row">
             <div>
               <img
-                src="logos/logo-spotify.svg"
+                src="/astro-showcase/logos/logo-spotify.svg"
                 alt="spotify"
                 className="mb-8 w-36"
               />
@@ -45,7 +45,7 @@ export function TestimonialSectionTwo() {
             </div>
             <div className="relative mx-auto grid shrink-0 place-items-center lg:ml-auto">
               <img
-                src="avatars/avatar6.jpg"
+                src="/astro-showcase/avatars/avatar6.jpg"
                 alt="testimonial image"
                 className="h-80 w-80 rounded-full object-cover"
               />

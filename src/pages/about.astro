@@ -1,14 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeaderAbout from "../components/about/header"
-import FeaturesAbout from "../components/about/features"
-import TeamAbout from "../components/about/team"
-import TestimonialAbout from "../components/about/testimonials"
-import FooterAbout from "../components/about/footer"
+import Layout from '@/layouts/Layout.astro';
+import HeaderAbout from "@/components/about/header"
+import FeaturesAbout from "@/components/about/features"
+import TeamAbout from "@/components/about/team"
+import TestimonialAbout from "@/components/about/testimonials"
+import FooterAbout from "@/components/about/footer"
 ---
 
 
-<Layout title="About Us Page">
+<Layout title="Acerca de nosotros página">
 	<main>
     <HeaderAbout client:only="react" />
     <FeaturesAbout client:only="react" />
