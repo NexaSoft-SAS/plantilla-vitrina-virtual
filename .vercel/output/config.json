@@ -16,48 +16,8 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/404\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/about\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/all-components\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/landing\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/login\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/product\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/shopping-cart\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/signup\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/store\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/$",
-			"dest": "_render"
-		},
-		{
 			"src": "/.*",
-			"dest": "_render",
+			"dest": "/404.html",
 			"status": 404
 		}
 	]

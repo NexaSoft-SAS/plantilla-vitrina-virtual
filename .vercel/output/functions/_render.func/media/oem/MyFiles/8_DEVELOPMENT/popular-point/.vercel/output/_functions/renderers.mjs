@@ -158,18 +158,10 @@ async function renderToStaticMarkup(Component, props, { default: children, ...sl
 		identifierPrefix: prefix,
 	};
 	let html;
-	if (metadata?.hydrate) {
-		if ('renderToReadableStream' in ReactDOM) {
-			html = await renderToReadableStreamAsync(vnode, renderOptions);
-		} else {
-			html = await renderToPipeableStreamAsync(vnode, renderOptions);
-		}
+	if ('renderToReadableStream' in ReactDOM) {
+		html = await renderToReadableStreamAsync(vnode, renderOptions);
 	} else {
-		if ('renderToReadableStream' in ReactDOM) {
-			html = await renderToReadableStreamAsync(vnode, renderOptions);
-		} else {
-			html = await renderToStaticNodeStreamAsync(vnode, renderOptions);
-		}
+		html = await renderToPipeableStreamAsync(vnode, renderOptions);
 	}
 	return { html, attrs };
 }
@@ -199,28 +191,6 @@ async function renderToPipeableStreamAsync(vnode, options) {
 				);
 			},
 		});
-	});
-}
-
-async function renderToStaticNodeStreamAsync(vnode, options) {
-	const Writable = await getNodeWritable();
-	let html = '';
-	return new Promise((resolve, reject) => {
-		let stream = ReactDOM.renderToStaticNodeStream(vnode, options);
-		stream.on('error', (err) => {
-			reject(err);
-		});
-		stream.pipe(
-			new Writable({
-				write(chunk, _encoding, callback) {
-					html += chunk.toString('utf-8');
-					callback();
-				},
-				destroy() {
-					resolve(html);
-				},
-			})
-		);
 	});
 }
 

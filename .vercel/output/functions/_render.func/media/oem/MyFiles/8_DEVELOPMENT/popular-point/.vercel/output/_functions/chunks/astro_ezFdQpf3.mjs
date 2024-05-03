@@ -3,7 +3,7 @@ import { escape } from 'html-escaper';
 import { clsx } from 'clsx';
 import 'cssesc';
 
-const ASTRO_VERSION = "4.7.0";
+const ASTRO_VERSION = "4.7.1";
 const REROUTE_DIRECTIVE_HEADER = "X-Astro-Reroute";
 const ROUTE_TYPE_HEADER = "X-Astro-Route-Type";
 const DEFAULT_404_COMPONENT = "astro-default-404";
@@ -406,7 +406,7 @@ function createAstroGlobFn() {
 }
 function createAstro(site) {
   return {
-    // TODO: this is no longer neccessary for `Astro.site`
+    // TODO: this is no longer necessary for `Astro.site`
     // but it somehow allows working around caching issues in content collections for some tests
     site: new URL(site) ,
     generator: `Astro v${ASTRO_VERSION}`,
@@ -776,13 +776,15 @@ const voidElementNames = /^(area|base|br|col|command|embed|hr|img|input|keygen|l
 const htmlBooleanAttributes = /^(?:allowfullscreen|async|autofocus|autoplay|controls|default|defer|disabled|disablepictureinpicture|disableremoteplayback|formnovalidate|hidden|loop|nomodule|novalidate|open|playsinline|readonly|required|reversed|scoped|seamless|itemscope)$/i;
 const htmlEnumAttributes = /^(?:contenteditable|draggable|spellcheck|value)$/i;
 const svgEnumAttributes = /^(?:autoReverse|externalResourcesRequired|focusable|preserveAlpha)$/i;
+const AMPERSAND_REGEX = /&/g;
+const DOUBLE_QUOTE_REGEX = /"/g;
 const STATIC_DIRECTIVES = /* @__PURE__ */ new Set(["set:html", "set:text"]);
 const toIdent = (k) => k.trim().replace(/(?!^)\b\w|\s+|\W+/g, (match, index) => {
   if (/\W/.test(match))
     return "";
   return index === 0 ? match : match.toUpperCase();
 });
-const toAttributeString = (value, shouldEscape = true) => shouldEscape ? String(value).replace(/&/g, "&#38;").replace(/"/g, "&#34;") : value;
+const toAttributeString = (value, shouldEscape = true) => shouldEscape ? String(value).replace(AMPERSAND_REGEX, "&#38;").replace(DOUBLE_QUOTE_REGEX, "&#34;") : value;
 const kebab = (k) => k.toLowerCase() === k ? k : k.replace(/[A-Z]/g, (match) => `-${match.toLowerCase()}`);
 const toStyleString = (obj) => Object.entries(obj).filter(([_, v]) => typeof v === "string" && v.trim() || typeof v === "number").map(([k, v]) => {
   if (k[0] !== "-" && k[1] !== "-")
@@ -1177,20 +1179,20 @@ class AstroComponentInstance {
     if (this.returnValue !== void 0)
       return this.returnValue;
     this.returnValue = this.factory(result, this.props, this.slotValues);
+    if (isPromise(this.returnValue)) {
+      this.returnValue.then((resolved) => {
+        this.returnValue = resolved;
+      }).catch(() => {
+      });
+    }
     return this.returnValue;
   }
   async render(destination) {
-    if (this.returnValue === void 0) {
-      await this.init(this.result);
-    }
-    let value = this.returnValue;
-    if (isPromise(value)) {
-      value = await value;
-    }
-    if (isHeadAndContent(value)) {
-      await value.content.render(destination);
+    const returnValue = await this.init(this.result);
+    if (isHeadAndContent(returnValue)) {
+      await returnValue.content.render(destination);
     } else {
-      await renderChild(destination, value);
+      await renderChild(destination, returnValue);
     }
   }
 }
@@ -2125,4 +2127,4 @@ function spreadAttributes(values = {}, _name, { class: scopedClassName } = {}) {
   return markHTMLString(output);
 }
 
-export { AstroError as A, chunkToString as B, isRenderInstruction as C, DEFAULT_404_COMPONENT as D, ExpectedImage as E, FailedToFetchRemoteImageDimensions as F, GetStaticPathsRequired as G, LocalsNotAnObject as H, IncompatibleDescriptorOptions as I, clientLocalsSymbol as J, clientAddressSymbol as K, LocalImageUsedWrongly as L, MissingImageDimension as M, NoMatchingStaticPathFound as N, ClientAddressNotAvailable as O, PageNumberParamNotFound as P, ASTRO_VERSION as Q, ROUTE_TYPE_HEADER as R, StaticClientAddressNotAvailable as S, responseSentSymbol as T, UnsupportedImageFormat as U, AstroResponseHeadersReassigned as V, renderPage as W, renderEndpoint as X, REROUTABLE_STATUS_CODES as Y, UnsupportedImageConversion as a, MissingSharp as b, createAstro as c, createComponent as d, renderSlot as e, renderHead as f, addAttribute as g, renderComponent as h, InvalidImageService as i, ExpectedImageOptions as j, ImageMissingAlt as k, REROUTE_DIRECTIVE_HEADER as l, maybeRenderHead as m, ResponseSentError as n, MiddlewareNoDataOrNextCalled as o, MiddlewareNotAResponse as p, InvalidGetStaticPathsReturn as q, renderTemplate as r, spreadAttributes as s, InvalidGetStaticPathsEntry as t, GetStaticPathsExpectedParams as u, GetStaticPathsInvalidRouteParam as v, PrerenderDynamicEndpointPathCollide as w, ReservedSlotName as x, renderSlotToString as y, renderJSX as z };
+export { AstroError as A, chunkToString as B, isRenderInstruction as C, DEFAULT_404_COMPONENT as D, ExpectedImage as E, FailedToFetchRemoteImageDimensions as F, GetStaticPathsRequired as G, LocalsNotAnObject as H, IncompatibleDescriptorOptions as I, clientLocalsSymbol as J, clientAddressSymbol as K, LocalImageUsedWrongly as L, MissingImageDimension as M, NoMatchingStaticPathFound as N, ClientAddressNotAvailable as O, PageNumberParamNotFound as P, ASTRO_VERSION as Q, ROUTE_TYPE_HEADER as R, StaticClientAddressNotAvailable as S, responseSentSymbol as T, UnsupportedImageFormat as U, AstroResponseHeadersReassigned as V, renderPage as W, renderEndpoint as X, REROUTABLE_STATUS_CODES as Y, UnsupportedImageConversion as a, MissingSharp as b, InvalidImageService as c, ExpectedImageOptions as d, createAstro as e, createComponent as f, ImageMissingAlt as g, addAttribute as h, renderSlot as i, renderHead as j, renderComponent as k, REROUTE_DIRECTIVE_HEADER as l, maybeRenderHead as m, ResponseSentError as n, MiddlewareNoDataOrNextCalled as o, MiddlewareNotAResponse as p, InvalidGetStaticPathsReturn as q, renderTemplate as r, spreadAttributes as s, InvalidGetStaticPathsEntry as t, GetStaticPathsExpectedParams as u, GetStaticPathsInvalidRouteParam as v, PrerenderDynamicEndpointPathCollide as w, ReservedSlotName as x, renderSlotToString as y, renderJSX as z };
