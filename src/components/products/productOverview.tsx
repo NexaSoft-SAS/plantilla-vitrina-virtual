@@ -36,6 +36,8 @@ const ProductOverview = () => {
                 thumb_src={product.thumb_src}
                 thumb_alt={product.thumb_alt}
                 color={product.color}
+                description={product.description}
+                colors={[product.color]}
                 title={product.title}
                 price={product.price}
                 position="left"
