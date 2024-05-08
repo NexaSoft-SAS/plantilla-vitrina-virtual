@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
+// import vercel from "@astrojs/vercel/serverless";
 // const isProd = process.env.NODE_ENV === "production";
 
 
@@ -14,6 +14,6 @@ export default defineConfig({
   })],
   site: "https://nexasoft.github.io",
   base: "/astro-showcase",
-  output: "hybrid",
-  adapter: vercel()
+  output: "static",
+  // adapter: vercel()
 });
