@@ -12,15 +12,17 @@ const { title, metaDescription } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html">
     <link rel="icon" type="image/svg+xml" href="/astro-showcase/favicon.svg" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Noto+Sans:300,400,500,600,700,800|PT+Mono:300,400,500,600,700"
       rel="stylesheet"
     />
+    <base href=".">
     <title>{title}</title>
     <meta name="description" content={metaDescription} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="canonical" href="https://www.creative-tim.com/astro/" />
+    <link rel="canonical" href="https://plantilla-vitrina-virtual-nexasoftsas-projects.vercel.app/" />
     <!-- Google Tag Manager -->
     <!-- <script>
       (function (w, d, s, l, i) {
@@ -52,14 +54,17 @@ const { title, metaDescription } = Astro.props;
   <script is:inline
     src="https://kit.fontawesome.com/349ee9c857.js"
     crossOrigin="anonymous"
+    type="text/javascript"
   ></script>
   <!-- Bootstrap JavaScript Bundle with Popper -->
   <script is:inline
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+    type="text/javascript"
+    ></script>
   <!-- Product JavaScript -->
-  <!-- <script>
+  <!-- <script type="application/javascript">
     import "/assets/js/astro-ecommerce.js"
   </script> -->
 </html>
